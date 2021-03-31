@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Duc Truong">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        <title>Piggie Matching Game</title>
+    </head>
+    <body onload="generatePiggies(); currentScore()">
+        <div class="page">
+            <div class="leftImage">
+                <img src="/images/leftpiggy.jpg" alt="Sleepy Piggie" id="leftpiggy">
+            </div>
+            <div class="rightImage">
+                <img src="/images/rightpiggy.jpg" alt="Angry Piggie" id="rightpiggy">
+            </div>
+            <div class="textContainer" id="textContainer">
+                <div class="text">
+                    <h1 id="header">Can You Catch the Extra Piggie?</h1>
+                </div>
+                <div class="text">
+                    <h2 id="score"></h2>
+                </div>
+                <div class="text">
+                    <p class="instructions" id="instructions">Click the guinea pig on the left side that is missing from the right side.</p>
+                </div>
+                <div id="reset"></div>
+            </div>
+            <div class="gameContainer">
+                <div class="game" id="leftSide" onmouseover="currentLevel()"></div>
+                <div class="game" id="rightSide" onmouseover="currentLevel()"></div>
+            </div>
+        </div>
+        <script src="matching-game.js"></script>
+    </body>
+</html>

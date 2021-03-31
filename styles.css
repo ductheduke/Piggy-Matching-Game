@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:#E6B0AA;
+}
+
+img {
+  position: absolute;
+}
+
+.game {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  overflow: hidden;
+}
+
+.gameContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  padding: 100px;
+  height: 600px;
+  background-image: url(/images/piggybg.png);
+  background-color:#F5CBA7;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px dotted whitesmoke;
+  border-radius: 15px;
+}
+
+.page {
+  margin: 0 auto;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.text {
+  padding-bottom: 20px;
+}
+
+.textContainer {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: #2C3E50;
+}
+
+#header, #score {
+  font-family: 'Indie Flower', cursive;
+  font-size: 50px;
+}
+
+#instructions {
+  font-family: 'Indie Flower', cursive;
+  font-size: 40px;
+}
+
+#leftpiggy {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 300px;
+}
+
+#rightpiggy {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  height: 300px;
+}
+
+#leftSide {
+  border: 1px solid white;
+  border-radius: 15px;
+  background-image: url(/images/graybg.png);
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+#rightSide {
+  margin-left: 50px;
+}
