@@ -15,17 +15,17 @@ function generatePiggies() {
     for (let i = 0; i < numberOfPiggies; i++) {
 
         // Generate the original set of images
-        let piggy = document.createElement('img');
-        piggy.src = 'images/piggy.png';
+        let piggy = document.createElement("img");
+        piggy.src = "images/piggy.png";
         piggy.height = "90";
 
         // Create random values for top location
         let randomTop = Math.floor(Math.random() * 400) + 1;
-        piggy.style.top = randomTop + 'px';
+        piggy.style.top = randomTop + "px";
 
         // Create random values for left location
         let randomLeft = Math.floor(Math.random() * 400) + 1;
-        piggy.style.left = randomLeft + 'px';
+        piggy.style.left = randomLeft + "px";
         
         // Place the images in the left side box
         theLeftSide.appendChild(piggy);
@@ -41,40 +41,35 @@ function generatePiggies() {
     theRightSide.appendChild(leftSideImages);                 
 
     // If player clicks on the correct image, move onto next level
-    theLeftSide.lastChild.addEventListener('click',nextLevel); 
+    theLeftSide.lastChild.onclick = function nextLevel(event) {
+        // Make sure the event does not get applied to other elements in the web page
+        event.stopPropagation();
 
-    // If player clicks on anything other than the correct image then game over
-    theBody.addEventListener('click',gameOver);          
-}
+        // Increase the number of images in the next level
+        numberOfPiggies += 5;             
 
-function nextLevel(event) {
-    // Make sure the event does not get applied to other elements in the web page
-    event.stopPropagation();
+        // After the correct image was selected, all images must be removed before a new set of images is generated 
+        while (theLeftSide.firstChild) {
+            theLeftSide.removeChild(theLeftSide.firstChild);
+        }
+        while (theRightSide.firstChild) {
+            theRightSide.removeChild(theRightSide.firstChild);
+        }
 
-    // Increase the number of images in the next level
-    numberOfPiggies += 5;             
+        // Start the next level
+        generatePiggies();
 
-    // After the correct image was selected, all images must be removed before a new set of images is generated 
-    while (theLeftSide.firstChild) {
-        theLeftSide.removeChild(theLeftSide.firstChild);
-    }
-    while (theRightSide.firstChild) {
-        theRightSide.removeChild(theRightSide.firstChild);
-    }
+        // Keep track of level
+        level++;
 
-    // Start the next level
-    generatePiggies();
-
-    // Keep track of level
-    level++;
-
-    // Keep track of current score
-    score = level * 10;
-    currentScore();
+        // Keep track of current score
+        score = level * 100;
+        currentScore();
+    }; 
 }
 
 // Game over if player selects anything other than the correct image
-function gameOver() {
+theBody.onclick = function gameOver() {
 
     // Circle the correct answer
     let correctAnswer = theLeftSide.lastChild;
@@ -97,7 +92,7 @@ function gameOver() {
         location.reload();
     };
     reset.appendChild(gameOver);
-}
+};
 
 // Keep track of the current level
 function currentLevel() {
