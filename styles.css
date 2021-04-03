@@ -14,8 +14,8 @@ img {
 
 .game {
   position: relative;
-  height: 500px;
-  width: 500px;
+  height: 350px;
+  width: 350px;
   overflow: hidden;
 }
 
@@ -25,8 +25,8 @@ img {
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
-  padding: 100px;
-  height: 600px;
+  padding: 50px;
+  height: 400px;
   background-image: url("images/piggybg.png");
   background-color:#F5CBA7;
   background-position: bottom;
@@ -61,26 +61,26 @@ img {
 
 #header, #score {
   font-family: 'Indie Flower', cursive;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 #instructions {
   font-family: 'Indie Flower', cursive;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 #leftpiggy {
   position: fixed;
   left: 0px;
   bottom: 0px;
-  height: 300px;
+  height: 200px;
 }
 
 #rightpiggy {
   position: fixed;
   right: 0px;
   bottom: 0px;
-  height: 300px;
+  height: 200px;
 }
 
 #leftSide {
