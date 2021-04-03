@@ -17,7 +17,7 @@ function generatePiggies() {
         // Generate the original set of images
         let piggy = document.createElement("img");
         piggy.src = "images/piggy.png";
-        piggy.height = "50";
+        piggy.height = "70";
 
         // Create random values for top location
         let randomTop = Math.floor(Math.random() * 400) + 1;
