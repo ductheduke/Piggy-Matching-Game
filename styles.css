@@ -14,8 +14,8 @@ img {
 
 .game {
   position: relative;
-  height: 350px;
-  width: 350px;
+  height: 400px;
+  width: 400px;
   overflow: hidden;
 }
 
@@ -25,8 +25,8 @@ img {
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
-  padding: 50px;
-  height: 400px;
+  padding: 70px;
+  height: 450px;
   background-image: url("images/piggybg.png");
   background-color:#F5CBA7;
   background-position: bottom;
@@ -73,14 +73,14 @@ img {
   position: fixed;
   left: 0px;
   bottom: 0px;
-  height: 200px;
+  height: 250px;
 }
 
 #rightpiggy {
   position: fixed;
   right: 0px;
   bottom: 0px;
-  height: 200px;
+  height: 250px;
 }
 
 #leftSide {
